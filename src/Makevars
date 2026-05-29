@@ -1,0 +1,8 @@
+# Compile as Objective-C++ (a C++ superset, so the plain .cpp kernels build
+# unchanged) so src/metal_grad.cpp can use Metal/Foundation Obj-C APIs with
+# ARC. Metal is macOS-only, consistent with the pre-existing macOS-only
+# -framework Accelerate; this package is GitHub-only (non-CRAN), so no
+# configure/Makevars.in portability gate is added (add-metal-backend, 2026-05-29).
+CXX_STD = CXX17
+PKG_CXXFLAGS = -x objective-c++ -fobjc-arc
+PKG_LIBS = -framework Accelerate -framework Metal -framework Foundation
