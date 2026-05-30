@@ -1,7 +1,6 @@
 Package: dat
 Type: Package
-Title: Definable Algebra Theory: Symbolic Differentiation with
-        Language-Level Awareness
+Title: Definable Algebra Theory: Symbolic Differentiation with Language-Level Awareness
 Version: 0.1.0
 Authors@R: person("Che", "Cheng", email = "lufee2005@gmail.com",
                   role = c("aut", "cre"))
@@ -15,19 +14,23 @@ Description: Symbolic source-transformation differentiation for vector
     framework.
 License: MIT + file LICENSE
 Encoding: UTF-8
+LazyData: true
 SystemRequirements: macOS (Accelerate framework) for the optional vDSP
-        fast-path backend; additionally a Metal SDK and a Metal-capable
-        GPU for the optional Metal compute backend (used only above
-        dat.metal_threshold). Both are optional; the package builds and
-        runs base-R paths without them.
-Imports: stats, Rcpp
-LinkingTo: Rcpp
-Suggests: testthat (>= 3.0.0), Deriv, covr, devtools, bench
+    fast-path backend; additionally a Metal SDK and a Metal-capable GPU for the
+    optional Metal compute backend (used only above dat.metal_threshold). Both
+    are optional; the package builds and runs base-R paths without them.
+Imports:
+    stats,
+    Rcpp
+LinkingTo:
+    Rcpp
+Suggests:
+    testthat (>= 3.0.0),
+    Deriv,
+    covr,
+    devtools,
+    bench
 Config/testthat/edition: 3
 URL: https://github.com/kiki830621/analytical_calculus
 BugReports: https://github.com/kiki830621/analytical_calculus/issues
 Config/roxygen2/version: 8.0.0
-NeedsCompilation: yes
-Packaged: 2026-05-30 04:02:59 UTC; che
-Author: Che Cheng [aut, cre]
-Maintainer: Che Cheng <lufee2005@gmail.com>
