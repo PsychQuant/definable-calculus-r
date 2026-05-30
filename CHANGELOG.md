@@ -7,6 +7,12 @@ Format loosely follows Keep a Changelog; entries reference their Spectra change.
 
 ### Changed
 
+- **Package hygiene.** Removed 4 stale `inst/benchmarks/*.bak` backup files
+  (they were git-tracked and shipped to users via `inst/`). Trimmed the
+  installable package: only `inst/benchmarks/real_world_patterns.R` (a test
+  dependency) ships now; the maintainer-only microbenchmarks and AD-comparison
+  scripts stay in the repo but are `.Rbuildignore`d. Documented the local-only
+  `references/` (PyTorch/JAX AD baselines, gitignored) in `CLAUDE.md`.
 - **Version 0.1.0** (first minor release) + first `NEWS.md`. Package builds and
   installs cleanly (`R CMD build` + `R CMD INSTALL`; `library(dat)` works).
   `src/Makevars` uses `CXX_STD = CXX17` instead of a literal `-std=c++17` flag.
